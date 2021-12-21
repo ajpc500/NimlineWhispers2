@@ -65,7 +65,7 @@ Complete! Files written to:
 [+] Success! Outputted to syscalls.nim
 ```
 
-For easy of integration, the mapping shown in the command-line is added as a comment in the outputted `syscalls.nim` file (just above the functions and below the SW2 methods). As below (including the first function to demonstrate the output):
+For ease of integration, the mapping shown in the command-line is added as a comment in the outputted `syscalls.nim` file (just above the functions and below the SW2 methods). As below (including the first function to demonstrate the output):
 
 ```
 ...
@@ -80,7 +80,7 @@ For easy of integration, the mapping shown in the command-line is added as a com
 proc vWhUCQWffAEdMboE*(ThreadHandle: HANDLE, PreviousSuspendCount: PULONG): NTSTATUS {.asmNoStackFrame.} =
     asm """
 	mov [rsp +8], rcx 
-  ...
+...
 ```
 Notably your function definitions such as the below will need to be updated with the randomised names too.
 
