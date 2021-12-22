@@ -101,7 +101,7 @@ class NimlineWhispers:
 		out = "{.emit: \"\"\"\n"
 		
 		h = open(self.sw2baseh, mode='r').read()
-		if platform.system() == "Windows": h = h.replace('Windows.h', 'windows.h')	
+		if platform.system() != "Windows": h = h.replace('Windows.h', 'windows.h')	
 		h = h.replace('<SEED_VALUE>', f'0x{self.syswhispers.seed:08X}')
 		h += "#endif\n"
 		out += h
